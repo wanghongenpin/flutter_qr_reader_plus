@@ -5,6 +5,7 @@ homepage: https://github.com/wanghongen/flutter_qr_reader_plus
 
 environment:
   sdk: ">=2.12.0 <4.0.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
@@ -18,8 +19,12 @@ dev_dependencies:
 flutter:
 
   plugin:
-    androidPackage: me.hetian.flutter_qr_reader
-    pluginClass: FlutterQrReaderPlugin
+    platforms:
+      android:
+        package: me.hetian.flutter_qr_reader
+        pluginClass: FlutterQrReaderPlugin
+      ios:
+        pluginClass: FlutterQrReaderPlugin
 
   assets:
     - assets/tool_img.png
