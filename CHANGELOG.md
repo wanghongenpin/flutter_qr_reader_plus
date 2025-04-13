@@ -26,3 +26,8 @@
 
 解决scanBoxRatio无效问题
 
+
+## 1.0.6
+
+升级flutter版本
+
