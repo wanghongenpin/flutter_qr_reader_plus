@@ -4,28 +4,29 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:8.0.2' // 使用兼容的版本
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    namespace 'me.hetian.flutter_qr_reader' // 添加 namespace
+    compileSdkVersion 34 // 添加 compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21 // 根据需要调整最低支持版本
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {

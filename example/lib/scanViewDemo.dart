@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_qr_reader/qrcode_reader_view.dart';
+import 'package:flutter_qr_reader_plus/qrcode_reader_view.dart';
 
 class ScanViewDemo extends StatefulWidget {
-  ScanViewDemo({Key key}) : super(key: key);
+  ScanViewDemo();
 
   @override
   _ScanViewDemoState createState() => new _ScanViewDemoState();
@@ -46,7 +46,7 @@ class _ScanViewDemoState extends State<ScanViewDemo> {
         );
       },
     );
-    _key.currentState.startScan();
+    _key.currentState?.startScan();
   }
 
   @override
